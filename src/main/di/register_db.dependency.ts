@@ -2,7 +2,7 @@ import { Sequelize } from "sequelize-typescript"
 import { Dialect } from "sequelize/types"
 import { container } from "tsyringe"
 
-const registerDBDependecny = () => {
+const registerDBDependency = () => {
     const injectDb = () => {
         const sequelize = new Sequelize("", "", "", {
             dialect: "" as Dialect,
@@ -27,4 +27,4 @@ const registerDBDependecny = () => {
     injectDb()
 }
 
-export default registerDBDependecny
+export default registerDBDependency

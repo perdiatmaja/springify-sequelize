@@ -1,7 +1,7 @@
-import { Sequelize } from "sequelize";
-import BaseModel from "../models/base.model";
-import BaseAttributes from "../models/base.attributes";
-import { ModelCtor } from "sequelize-typescript";
+import BaseAttributes from "models/base.attributes"
+import BaseModel from "models/base.model"
+import { Sequelize } from "sequelize"
+import { ModelCtor } from "sequelize-typescript"
 
 abstract class BaseDAO<T extends BaseAttributes, M extends BaseModel<T>> {
     private readonly _sequelize: Sequelize
@@ -37,10 +37,10 @@ abstract class BaseDAO<T extends BaseAttributes, M extends BaseModel<T>> {
     public async update(entity: T): Promise<M> {
         const existingData = this.findById(entity.id);
         (await existingData).update(entity);
-        (await existingData).save()
-        
+        (await existingData).save();
+
         return existingData
     }
 }
 
-export default BaseDAO
+export = BaseDAO

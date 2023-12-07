@@ -1,6 +1,6 @@
 import { Sequelize } from "sequelize";
-import DemoModel, { DemoAttributes } from "../models/demo.model";
-import BaseDAO from "./base.dao";
+import DemoModel, { DemoAttributes } from "../../models/demo.model";
+import BaseDAO from "../../../main/modules/data/base.dao";
 
 class DemoDAO extends BaseDAO<DemoAttributes, DemoModel> {
     constructor(sequelize: Sequelize) {
