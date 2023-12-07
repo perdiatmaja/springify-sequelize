@@ -16,6 +16,10 @@ abstract class BaseDAO<T extends BaseAttributes, M extends BaseModel<T>> {
         return this._modelCreator
     }
 
+    protected get sequelize(): Sequelize {
+        return this._sequelize
+    }
+
     public async findById(id: number): Promise<M> {
         return await this.model.findOne({
             where: {
