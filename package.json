@@ -13,7 +13,8 @@
     "@types/uuid": "^9.0.7",
     "mysql2": "^2.3.3",
     "sequelize": "^6.17.0",
-    "sequelize-typescript": "^2.1.3"
+    "sequelize-typescript": "^2.1.3",
+    "springify.ts": "file:../springify"
   },
   "devDependencies": {
     "reflect-metadata": "^0.1.13",
