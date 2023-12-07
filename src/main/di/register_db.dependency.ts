@@ -7,8 +7,10 @@ const registerDBDependecny = () => {
         const sequelize = new Sequelize("", "", "", {
             dialect: "" as Dialect,
             host: "",
-            port: "",
-            logging: "",
+            port: 3306,
+            logging: (query) => {
+                console.log(query)
+            },
             define: {
                 timestamps: true,
                 freezeTableName: true
