@@ -1,0 +1,11 @@
+.vscode
+node_modules
+.env.*
+.git
+.gitignore
+.npmignore
+build.sh
+tsconfig.build.json
+tsconfig.json
+src/**/*
+.github

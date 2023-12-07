@@ -13,6 +13,8 @@
     "allowJs": true
   },
   "exclude": [
-    "./src/demo"
+    "./src/demo",
+    "./dist/ts",
+    "./dist/index.d.ts"
   ]
 }
