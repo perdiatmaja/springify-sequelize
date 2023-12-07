@@ -1,13 +1,14 @@
-import { Sequelize } from "sequelize";
-import DemoModel, { DemoAttributes } from "../../models/demo.model";
-import BaseDAO from "../../../main/modules/data/base.dao";
+import DemoModel from "../../models/demo.model";
+import BaseDAO from "../../../../dist/ts/classes/base.dao";
+import BaseAttributes from "../../../../dist/ts/classes/base.attributes";
+import { injectable } from "tsyringe";
+import { Sequelize } from "sequelize-typescript";
 
-class DemoDAO extends BaseDAO<DemoAttributes, DemoModel> {
+@injectable()
+class DemoDAO extends BaseDAO<BaseAttributes, DemoModel> {
+
     constructor(sequelize: Sequelize) {
         super(sequelize, DemoModel)
-    }
-    async test() {
-        const test = await this.findById(1)
     }
 }
 

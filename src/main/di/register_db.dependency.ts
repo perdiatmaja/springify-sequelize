@@ -4,16 +4,17 @@ import { container } from "tsyringe"
 
 const registerDBDependency = () => {
     const injectDb = () => {
-        const sequelize = new Sequelize("", "", "", {
-            dialect: "" as Dialect,
-            host: "",
+        const sequelize = new Sequelize("demo", "root", "root", {
+            dialect: "mysql" as Dialect,
+            host: "localhost",
             port: 3306,
             logging: (query) => {
                 console.log(query)
             },
             define: {
                 timestamps: true,
-                freezeTableName: true
+                freezeTableName: true,
+                underscored: true
             },
             pool: {
                 max: 5,

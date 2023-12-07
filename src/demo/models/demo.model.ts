@@ -1,13 +1,13 @@
 import { Table } from "sequelize-typescript";
-import BaseModel from "../../main/models/base.model";
-import BaseAttributes from "../../main/models/base.attributes";
+import { SpringifyExternalAttributes } from "../../../dist";
+import BaseExternalModel from "../../../dist/ts/classes/base_external.model";
 
-export interface DemoAttributes extends BaseAttributes {
+export interface DemoAttributes extends SpringifyExternalAttributes {
     
 }
 
 @Table({ modelName: "demo" })
-class DemoModel extends BaseModel<DemoAttributes> {
+class DemoModel extends BaseExternalModel<DemoAttributes> {
 
 }
 

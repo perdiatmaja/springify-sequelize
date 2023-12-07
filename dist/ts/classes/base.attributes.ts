@@ -1,5 +1,5 @@
 interface BaseAttributes {
-    id: number
+    id?: number
 }
 
 export = BaseAttributes

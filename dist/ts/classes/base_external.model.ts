@@ -4,10 +4,10 @@ import BaseModel from "./base.model";
 
 abstract class BaseExternalModel<A extends BaseExternalAttributes> extends BaseModel<A> {
     @Column({
-        type: DataType.BIGINT,
+        type: DataType.STRING,
         defaultValue: DataType.UUIDV4
     })
-    external_id!: string
+    externalId?: string
 }
 
 export = BaseExternalModel

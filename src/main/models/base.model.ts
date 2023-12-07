@@ -6,13 +6,7 @@ abstract class BaseModel<A extends BaseAttributes> extends Model<A> {
     @Column({
         type: DataType.BIGINT
     })
-    id!: string
-
-    @Column({
-        type: DataType.BIGINT,
-        defaultValue: DataType.UUIDV4
-    })
-    external_id!: string
+    id?: string
 }
 
 export default BaseModel

@@ -4,18 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "demo": "ts-node ./src/demo/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "perdi.atmaja@outlook.com",
   "license": "ISC",
   "dependencies": {
     "mysql2": "^2.3.3",
-    "reflect-metadata": "^0.1.13",
     "sequelize": "^6.17.0",
     "sequelize-typescript": "^2.1.3",
-    "tsyringe": "^4.8.0"
+    "uuid": "^9.0.1",
+    "@types/uuid": "^9.0.7"
   },
   "devDependencies": {
+    "reflect-metadata": "^0.1.13",
+    "tsyringe": "^4.6.0",
     "typescript": "^5.2.2",
     "typescript-require": "^0.3.0"
   }
