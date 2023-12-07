@@ -1,5 +1,5 @@
-import BaseAttributes from "models/base.attributes"
-import BaseModel from "models/base.model"
+import BaseAttributes from "./base.attributes"
+import BaseModel from "./base.model"
 import { Sequelize } from "sequelize"
 import { ModelCtor } from "sequelize-typescript"
 
