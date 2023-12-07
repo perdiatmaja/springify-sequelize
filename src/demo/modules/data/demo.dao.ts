@@ -1,11 +1,11 @@
 import DemoModel from "../../models/demo.model";
-import BaseDAO from "../../../../dist/ts/classes/base.dao";
-import BaseAttributes from "../../../../dist/ts/classes/base.attributes";
 import { injectable } from "tsyringe";
 import { Sequelize } from "sequelize-typescript";
+import BaseDAO from "../../../main/modules/data/base.dao";
+import BaseExternalAttributes from "../../../main/models/base_external.attributes";
 
 @injectable()
-class DemoDAO extends BaseDAO<BaseAttributes, DemoModel> {
+class DemoDAO extends BaseDAO<BaseExternalAttributes, DemoModel> {
 
     constructor(sequelize: Sequelize) {
         super(sequelize, DemoModel)

@@ -35,7 +35,7 @@ abstract class BaseDAO<T extends BaseAttributes, M extends BaseModel<T>> {
     }
 
     public async update(entity: T): Promise<M> {
-        const existingData = this.findById(entity.id);
+        const existingData = this.findById(entity.id!);
         (await existingData).update(entity);
         (await existingData).save()
         
