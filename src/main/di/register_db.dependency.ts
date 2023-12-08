@@ -24,6 +24,7 @@ const registerDBDependency = () => {
         })
 
         container.register<Sequelize>(Sequelize, { useValue: sequelize })
+        console.log("Sequelize injected")
     }
     injectDb()
 }

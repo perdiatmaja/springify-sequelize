@@ -1,8 +1,10 @@
 {
   "name": "springify-sequelize",
-  "version": "0.0.1",
+  "version": "0.0.1-SNAPSHOT",
   "description": "",
-  "main": "index.js",
+  "type": "commonjs",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "demo": "ts-node ./src/demo/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"

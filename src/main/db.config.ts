@@ -5,14 +5,14 @@ import registerDBDependency from "./di/register_db.dependency";
 
 @injectable()
 class DBConfig implements SpringifyPlugin {
-    private _onInited = async (_: DBConfig) => {}
+    private _onInited = async (_: DBConfig, __: Sequelize) => {}
 
     async init() {
         registerDBDependency()
-        await this._onInited(this)
+        await this._onInited(this, container.resolve(Sequelize))
     }
 
-    public set onInited(onInited: (dbConfig: DBConfig) => Promise<void>) {
+    public set onInited(onInited: (dbConfig: DBConfig, sequelize: Sequelize) => Promise<void>) {
         this._onInited = onInited
     }
 

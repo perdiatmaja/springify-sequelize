@@ -1,7 +1,6 @@
-import { Sequelize } from "sequelize";
 import BaseModel from "../../models/base.model";
 import BaseAttributes from "../../models/base.attributes";
-import { ModelCtor } from "sequelize-typescript";
+import { ModelCtor, Sequelize } from "sequelize-typescript";
 
 abstract class BaseDAO<T extends BaseAttributes, M extends BaseModel<T>> {
     private readonly _sequelize: Sequelize

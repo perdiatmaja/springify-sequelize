@@ -1,7 +1,7 @@
 import { AutoIncrement, Column, DataType, Model, PrimaryKey } from "sequelize-typescript";
-import BaseAttributes from "./base.attributes";
+import SpringifyAttributes from "./springify.attributes";
 
-abstract class BaseModel<A extends BaseAttributes> extends Model<A> {
+declare abstract class SpringifyModel<A extends SpringifyAttributes> extends Model<A> {
     @PrimaryKey
     @AutoIncrement
     @Column({
@@ -10,4 +10,4 @@ abstract class BaseModel<A extends BaseAttributes> extends Model<A> {
     id?: number
 }
 
-export = BaseModel
+export = SpringifyModel

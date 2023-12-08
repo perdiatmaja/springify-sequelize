@@ -1,9 +1,8 @@
-import BaseAttributes from "./base.attributes"
-import BaseModel from "./base.model"
-import { Sequelize } from "sequelize"
-import { ModelCtor } from "sequelize-typescript"
+import SpringifyAttributes from "./springify.attributes"
+import SpringifyModel from "./springify.model"
+import { ModelCtor, Sequelize } from "sequelize-typescript"
 
-abstract class BaseDAO<T extends BaseAttributes, M extends BaseModel<T>> {
+abstract class BaseDAO<T extends SpringifyAttributes, M extends SpringifyModel<T>> {
     private readonly _sequelize: Sequelize
     private readonly _modelCreator: ModelCtor
 
