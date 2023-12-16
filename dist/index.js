@@ -1,4 +1,4 @@
-const methodDecorators = require("./js/src/main/decorators/methods/transactionan.decorator")
+const methodDecorators = require("./js/src/main/decorators/methods/transactional.decorator")
 const baseModel = require("./js/src/main/models/base.model")
 const baseAttributes = require("./js/src/main/models/base.attributes")
 const baseExternalModel = require("./js/src/main/models/base_external.model")
